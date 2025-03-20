@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akun Game - Syndicate</title>
+    <meta
+      name="description"
+      content="Browse and buy premium game accounts with rare items, high ranks, and exclusive content. Secure transactions and verified accounts."
+    />
+    <meta
+      name="keywords"
+      content="game accounts, jual akun game, premium accounts, mobile legends account, valorant account"
+    />
+    <meta name="author" content="Syndicate" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Premium Game Accounts - Syndicate" />
+    <meta
+      property="og:description"
+      content="Browse and buy premium game accounts with rare items, high ranks, and exclusive content."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://syndicate-gaming.com/akun-game" />
+    <meta property="og:image" content="/images/og-image.jpg" />
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/src/styles/main.css" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <span class="brand-text">Syndicate</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/joki-game.html">Joki Game</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/akun-game.html"
+                  >Akun Game</a
+                >
+              </li>
+            </ul>
+            <button
+              class="btn btn-login"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 text-center" data-aos="fade-up">
+              <span class="section-tag">Premium Accounts</span>
+              <h1>Game Accounts Marketplace</h1>
+              <p class="lead">
+                Browse and buy verified premium game accounts with rare items
+                and high ranks
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Account Categories -->
+      <section class="account-categories">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="category-filter" data-aos="fade-up">
+                <button class="btn btn-filter active" data-filter="all">
+                  All Accounts
+                </button>
+                <button class="btn btn-filter" data-filter="moba">MOBA</button>
+                <button class="btn btn-filter" data-filter="fps">FPS</button>
+                <button class="btn btn-filter" data-filter="rpg">RPG</button>
+                <button class="btn btn-filter" data-filter="battle-royale">
+                  Battle Royale
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Account Listings -->
+      <section class="account-listings">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-4">
+              <!-- Filters Sidebar -->
+              <div class="filters-sidebar" data-aos="fade-right">
+                <div class="filter-section">
+                  <h3>Price Range</h3>
+                  <div class="price-range">
+                    <input
+                      type="range"
+                      class="form-range"
+                      id="priceRange"
+                      min="0"
+                      max="10000000"
+                      step="100000"
+                    />
+                    <div class="price-inputs">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="minPrice"
+                        placeholder="Min"
+                      />
+                      <span>-</span>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="maxPrice"
+                        placeholder="Max"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter-section">
+                  <h3>Game Type</h3>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="moba"
+                      id="mobaCB"
+                    />
+                    <label class="form-check-label" for="mobaCB">MOBA</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="fps"
+                      id="fpsCB"
+                    />
+                    <label class="form-check-label" for="fpsCB">FPS</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="rpg"
+                      id="rpgCB"
+                    />
+                    <label class="form-check-label" for="rpgCB">RPG</label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value="battle-royale"
+                      id="brCB"
+                    />
+                    <label class="form-check-label" for="brCB"
+                      >Battle Royale</label
+                    >
+                  </div>
+                </div>
+
+                <div class="filter-section">
+                  <h3>Account Level</h3>
+                  <select class="form-select" id="accountLevel">
+                    <option value="">All Levels</option>
+                    <option value="beginner">Beginner (1-30)</option>
+                    <option value="intermediate">Intermediate (31-60)</option>
+                    <option value="advanced">Advanced (61-90)</option>
+                    <option value="elite">Elite (91+)</option>
+                  </select>
+                </div>
+
+                <div class="filter-section">
+                  <h3>Sort By</h3>
+                  <select class="form-select" id="sortBy">
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="level-asc">Level: Low to High</option>
+                    <option value="level-desc">Level: High to Low</option>
+                    <option value="date-desc">Newest First</option>
+                    <option value="date-asc">Oldest First</option>
+                  </select>
+                </div>
+
+                <button class="btn btn-primary w-100 mt-3" id="applyFilters">
+                  Apply Filters
+                </button>
+                <button class="btn btn-outline w-100 mt-2" id="resetFilters">
+                  Reset Filters
+                </button>
+              </div>
+            </div>
+
+            <div class="col-lg-9 col-md-8">
+              <!-- Search and Sort Bar -->
+              <div class="search-sort-bar mb-4" data-aos="fade-up">
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <div class="search-box">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search accounts..."
+                      />
+                      <i class="bi bi-search"></i>
+                    </div>
+                  </div>
+                  <div class="col-md-6 text-md-end">
+                    <div class="view-options">
+                      <button class="btn btn-view active" data-view="grid">
+                        <i class="bi bi-grid"></i>
+                      </button>
+                      <button class="btn btn-view" data-view="list">
+                        <i class="bi bi-list"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Account Grid -->
+              <div class="row account-grid">
+                <!-- Account Card 1 -->
+                <div class="col-lg-6" data-aos="fade-up">
+                  <div class="premium-account-card">
+                    <div class="account-images">
+                      <div
+                        id="account1Carousel"
+                        class="carousel slide"
+                        data-bs-ride="carousel"
+                      >
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img
+                              src="/images/accounts/ml-mythic-1.jpg"
+                              alt="Mobile Legends Account Screenshot 1"
+                            />
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="/images/accounts/ml-mythic-2.jpg"
+                              alt="Mobile Legends Account Screenshot 2"
+                            />
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="/images/accounts/ml-mythic-3.jpg"
+                              alt="Mobile Legends Account Screenshot 3"
+                            />
+                          </div>
+                        </div>
+                        <button
+                          class="carousel-control-prev"
+                          type="button"
+                          data-bs-target="#account1Carousel"
+                          data-bs-slide="prev"
+                        >
+                          <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                          class="carousel-control-next"
+                          type="button"
+                          data-bs-target="#account1Carousel"
+                          data-bs-slide="next"
+                        >
+                          <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <div class="account-badges">
+                        <span class="badge bg-success">Verified</span>
+                        <span class="badge bg-primary">Premium</span>
+                      </div>
+                    </div>
+                    <div class="account-details">
+                      <h3>Mobile Legends Mythical Glory</h3>
+                      <div class="account-meta">
+                        <span><i class="bi bi-controller"></i> MOBA</span>
+                        <span><i class="bi bi-person"></i> Level 85</span>
+                        <span><i class="bi bi-clock"></i> 2+ Years</span>
+                      </div>
+                      <div class="account-features">
+                        <ul>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> 80+ Heroes
+                            Unlocked
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> 50+ Epic &
+                            Special Skins
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> All Emblem
+                            Sets Max Level
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> Season 18-25
+                            Mythical Glory
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="account-price">
+                        <div class="price-tag">
+                          <span class="current-price">Rp 3,200,000</span>
+                          <span class="original-price">Rp 4,000,000</span>
+                        </div>
+                        <a
+                          href="/account-detail.html?id=1"
+                          class="btn btn-primary"
+                          >View Details</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Account Card 2 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                  <div class="premium-account-card">
+                    <div class="account-images">
+                      <div
+                        id="account2Carousel"
+                        class="carousel slide"
+                        data-bs-ride="carousel"
+                      >
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img
+                              src="/images/accounts/valorant-radiant-1.jpg"
+                              alt="Valorant Account Screenshot 1"
+                            />
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="/images/accounts/valorant-radiant-2.jpg"
+                              alt="Valorant Account Screenshot 2"
+                            />
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="/images/accounts/valorant-radiant-3.jpg"
+                              alt="Valorant Account Screenshot 3"
+                            />
+                          </div>
+                        </div>
+                        <button
+                          class="carousel-control-prev"
+                          type="button"
+                          data-bs-target="#account2Carousel"
+                          data-bs-slide="prev"
+                        >
+                          <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                          class="carousel-control-next"
+                          type="button"
+                          data-bs-target="#account2Carousel"
+                          data-bs-slide="next"
+                        >
+                          <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <div class="account-badges">
+                        <span class="badge bg-success">Verified</span>
+                        <span class="badge bg-warning">Featured</span>
+                      </div>
+                    </div>
+                    <div class="account-details">
+                      <h3>Valorant Radiant Account</h3>
+                      <div class="account-meta">
+                        <span><i class="bi bi-controller"></i> FPS</span>
+                        <span><i class="bi bi-person"></i> Level 178</span>
+                        <span><i class="bi bi-clock"></i> 1.5 Years</span>
+                      </div>
+                      <div class="account-features">
+                        <ul>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> All Agents
+                            Unlocked
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> Premium Skin
+                            Collections
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> Battle Pass
+                            Complete (E1-E7)
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> Radiant Rank
+                            Last 3 Acts
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="account-price">
+                        <div class="price-tag">
+                          <span class="current-price">Rp 5,000,000</span>
+                          <span class="original-price">Rp 6,500,000</span>
+                        </div>
+                        <a
+                          href="/account-detail.html?id=2"
+                          class="btn btn-primary"
+                          >View Details</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Account Card 3 -->
+                <div class="col-lg-6" data-aos="fade-up">
+                  <div class="premium-account-card">
+                    <div class="account-images">
+                      <div
+                        id="account3Carousel"
+                        class="carousel slide"
+                        data-bs-ride="carousel"
+                      >
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img
+                              src="/images/accounts/genshin-ar60-1.jpg"
+                              alt="Genshin Impact Account Screenshot 1"
+                            />
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="/images/accounts/genshin-ar60-2.jpg"
+                              alt="Genshin Impact Account Screenshot 2"
+                            />
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="/images/accounts/genshin-ar60-3.jpg"
+                              alt="Genshin Impact Account Screenshot 3"
+                            />
+                          </div>
+                        </div>
+                        <button
+                          class="carousel-control-prev"
+                          type="button"
+                          data-bs-target="#account3Carousel"
+                          data-bs-slide="prev"
+                        >
+                          <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                          class="carousel-control-next"
+                          type="button"
+                          data-bs-target="#account3Carousel"
+                          data-bs-slide="next"
+                        >
+                          <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <div class="account-badges">
+                        <span class="badge bg-success">Verified</span>
+                        <span class="badge bg-danger">Hot</span>
+                      </div>
+                    </div>
+                    <div class="account-details">
+                      <h3>Genshin Impact AR60 Whale</h3>
+                      <div class="account-meta">
+                        <span><i class="bi bi-controller"></i> RPG</span>
+                        <span><i class="bi bi-person"></i> AR 60</span>
+                        <span><i class="bi bi-clock"></i> 2+ Years</span>
+                      </div>
+                      <div class="account-features">
+                        <ul>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> 30+ 5★
+                            Characters (C6)
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> 15+ 5★
+                            Weapons (R5)
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> All Areas
+                            100% Explored
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> 36★ Spiral
+                            Abyss Clear
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="account-price">
+                        <div class="price-tag">
+                          <span class="current-price">Rp 8,500,000</span>
+                          <span class="original-price">Rp 10,000,000</span>
+                        </div>
+                        <a
+                          href="/account-detail.html?id=3"
+                          class="btn btn-primary"
+                          >View Details</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Account Card 4 -->
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                  <div class="premium-account-card">
+                    <div class="account-images">
+                      <div
+                        id="account4Carousel"
+                        class="carousel slide"
+                        data-bs-ride="carousel"
+                      >
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img
+                              src="/images/accounts/pubg-conqueror-1.jpg"
+                              alt="PUBG Account Screenshot 1"
+                            />
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="/images/accounts/pubg-conqueror-2.jpg"
+                              alt="PUBG Account Screenshot 2"
+                            />
+                          </div>
+                          <div class="carousel-item">
+                            <img
+                              src="/images/accounts/pubg-conqueror-3.jpg"
+                              alt="PUBG Account Screenshot 3"
+                            />
+                          </div>
+                        </div>
+                        <button
+                          class="carousel-control-prev"
+                          type="button"
+                          data-bs-target="#account4Carousel"
+                          data-bs-slide="prev"
+                        >
+                          <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                          class="carousel-control-next"
+                          type="button"
+                          data-bs-target="#account4Carousel"
+                          data-bs-slide="next"
+                        >
+                          <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                          ></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <div class="account-badges">
+                        <span class="badge bg-success">Verified</span>
+                        <span class="badge bg-info">Rare</span>
+                      </div>
+                    </div>
+                    <div class="account-details">
+                      <h3>PUBG Mobile Conqueror</h3>
+                      <div class="account-meta">
+                        <span
+                          ><i class="bi bi-controller"></i> Battle Royale</span
+                        >
+                        <span><i class="bi bi-person"></i> Level 85</span>
+                        <span><i class="bi bi-clock"></i> 3+ Years</span>
+                      </div>
+                      <div class="account-features">
+                        <ul>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> 200+ Rare
+                            Outfits
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> Mythic Gun
+                            Skins
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> Season 1-20
+                            RP Items
+                          </li>
+                          <li>
+                            <i class="bi bi-check-circle-fill"></i> Multiple
+                            Conqueror Titles
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="account-price">
+                        <div class="price-tag">
+                          <span class="current-price">Rp 4,800,000</span>
+                          <span class="original-price">Rp 6,000,000</span>
+                        </div>
+                        <a
+                          href="/account-detail.html?id=4"
+                          class="btn btn-primary"
+                          >View Details</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Pagination -->
+              <div
+                class="pagination-wrapper text-center mt-5"
+                data-aos="fade-up"
+              >
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                      <a
+                        class="page-link"
+                        href="#"
+                        tabindex="-1"
+                        aria-disabled="true"
+                        >Previous</a
+                      >
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footer-about">
+              <h3 class="footer-brand">Syndicate</h3>
+              <p>
+                Premium gaming services for competitive players. Our mission is
+                to provide top-quality boosting services and premium accounts
+                for gamers worldwide.
+              </p>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="bi bi-twitter"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+                <a href="#" aria-label="Discord"
+                  ><i class="bi bi-discord"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <div class="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="/joki-game.html">Joki Game</a></li>
+                <li><a href="/akun-game.html">Akun Game</a></li>
+                <li><a href="/about.html">About Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <div class="footer-links">
+              <h4>Games</h4>
+              <ul>
+                <li><a href="/game-detail.html?id=1">Mobile Legends</a></li>
+                <li><a href="/game-detail.html?id=2">Valorant</a></li>
+                <li><a href="/game-detail.html?id=3">Genshin Impact</a></li>
+                <li><a href="/joki-game.html">All Games</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <div class="footer-newsletter">
+              <h4>Subscribe to Our Newsletter</h4>
+              <p>
+                Stay updated with our latest services, promotions, and gaming
+                news.
+              </p>
+              <form>
+                <div class="input-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your Email"
+                    required
+                  />
+                  <button class="btn btn-primary" type="submit">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2023 Syndicate. All Rights Reserved.</p>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login to Syndicate</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="rememberMe"
+                />
+                <label class="form-check-label" for="rememberMe"
+                  >Remember me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+            <div class="mt-3 text-center">
+              <p>
+                Don't have an account?
+                <a href="#" class="register-link">Register now</a>
+              </p>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS -->
+    <script src="/src/scripts/main.js"></script>
+    <script src="/src/scripts/akun-game.js"></script>
+  </body>
+</html>
